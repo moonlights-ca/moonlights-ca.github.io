@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import blueStrip from '../assets/blue-strip.png';
-import greenStrip from '../assets/green-strip.png';
-import pinkStrip from '../assets/pink-strip.png';
+import blueStrip from '../assets/blue-strip.webp';
+import greenStrip from '../assets/green-strip.webp';
+import pinkStrip from '../assets/pink-strip.webp';
 
 export default function About() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -37,17 +37,17 @@ export default function About() {
             <h3 className="text-3xl font-bold text-white">Our Vision</h3>
             <div className="space-y-4">
               <p className="text-gray-400 leading-relaxed">
-                Founded with a vision to transform how we think about lighting, moonlights is pioneering the next generation 
-                of LED systems. We believe that lighting should be more than just illumination—it should be reliable, 
+                Founded with a vision to transform how we think about lighting, moonlights is pioneering the next generation
+                of LED systems. We believe that lighting should be more than just illumination—it should be reliable,
                 efficient, and seamlessly integrated into our environments.
               </p>
               <p className="text-gray-400 leading-relaxed">
-                As a startup, we're not bound by traditional approaches. We're free to innovate, experiment, and push the 
-                boundaries of what's possible with LED technology. Our solutions combine cutting-edge engineering 
+                As a startup, we're not bound by traditional approaches. We're free to innovate, experiment, and push the
+                boundaries of what's possible with LED technology. Our solutions combine cutting-edge engineering
                 and sustainable design principles.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-2 gap-4 mt-8 pt-6">
               <div className="text-center p-4 bg-dark-700 rounded-lg border border-neon-blue/20 hover:border-neon-blue/40 transition-colors duration-300 flex flex-col justify-center min-h-[80px]">
                 <div className="text-2xl font-bold text-neon-pink mb-1">100%</div>
@@ -70,13 +70,14 @@ export default function About() {
 
           {/* Image Slideshow */}
           <div className="flex justify-center lg:justify-end items-start">
-            <div 
+            <div
               className="w-full max-w-md aspect-square rounded-2xl border border-neon-blue/30 overflow-hidden relative cursor-pointer"
               onClick={handleImageClick}
             >
-              <img 
-                src={images[currentImageIndex]} 
+              <img
+                src={images[currentImageIndex]}
                 alt={`LED Strip ${currentImageIndex + 1}`}
+                loading="lazy"
                 className="w-full h-full object-cover transition-opacity duration-500"
               />
             </div>

@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
 import Header from './Header'
 import Footer from './Footer'
-import rlML1 from '../assets/RL_ML-1.png'
-import rlML2 from '../assets/RL_ML-2.png'
-import rlML3 from '../assets/RL_ML-3.png'
+import rlML1 from '../assets/RL_ML-1.webp'
+import rlML2 from '../assets/RL_ML-2.webp'
+import rlML3 from '../assets/RL_ML-3.webp'
 
 export default function ResidentialLights() {
   // Scroll to top when component mounts
@@ -68,7 +68,7 @@ export default function ResidentialLights() {
   return (
     <div className="min-h-screen bg-dark-900">
       <Header />
-      
+
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900 relative overflow-hidden">
@@ -83,8 +83,8 @@ export default function ResidentialLights() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center">
               <div className="mb-6">
-                <Link 
-                  to="/" 
+                <Link
+                  to="/"
                   className="inline-flex items-center text-neon-blue hover:text-neon-purple transition-colors text-sm font-medium"
                 >
                   <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -93,11 +93,11 @@ export default function ResidentialLights() {
                   Back to Home
                 </Link>
               </div>
-              
+
               <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
                 <span className="bg-clip-text bg-gradient-to-r from-neon-pink to-neon-purple animate-glow">Residential</span> LED Solutions
               </h1>
-              
+
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Transform your home with intelligent LED lighting systems designed for safety, security, and style
               </p>
@@ -139,9 +139,10 @@ export default function ResidentialLights() {
                   <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                     <div className={`aspect-video bg-gradient-to-br ${product.color} p-0.5 rounded-xl`}>
                       <div className="w-full h-full bg-dark-700 rounded-xl overflow-hidden flex items-center justify-center p-4">
-                        <img 
-                          src={product.image} 
+                        <img
+                          src={product.image}
                           alt={product.name}
+                          loading="lazy"
                           className="max-w-full max-h-full object-contain rounded-lg"
                         />
                       </div>
@@ -219,14 +220,14 @@ export default function ResidentialLights() {
                   Contact our team for a personalized consultation and transform your home with smart LED lighting.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <Link 
-                    to="/#contact" 
+                  <Link
+                    to="/#contact"
                     className="btn-primary text-lg px-8 py-4"
                   >
                     Get Quote
                   </Link>
-                  <Link 
-                    to="/#products" 
+                  <Link
+                    to="/#products"
                     className="btn-secondary text-lg px-8 py-4"
                   >
                     View All Products

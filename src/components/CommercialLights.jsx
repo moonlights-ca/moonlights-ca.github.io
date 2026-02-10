@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
 import Header from './Header'
 import Footer from './Footer'
-import cmML1 from '../assets/CM_ML-1.png'
-import cmML4 from '../assets/CM_ML-4.png'
-import cmML6 from '../assets/CM_ML-6.png'
-import cmML7 from '../assets/CM_ML-7.png'
+import cmML1 from '../assets/CM_ML-1.webp'
+import cmML4 from '../assets/CM_ML-4.webp'
+import cmML6 from '../assets/CM_ML-6.webp'
+import cmML7 from '../assets/CM_ML-7.webp'
 
 export default function CommercialLights() {
   // Scroll to top when component mounts
@@ -91,7 +91,7 @@ export default function CommercialLights() {
   return (
     <div className="min-h-screen bg-dark-900">
       <Header />
-      
+
       <main className="pt-16">
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900 relative overflow-hidden">
@@ -106,8 +106,8 @@ export default function CommercialLights() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center">
               <div className="mb-6">
-                <Link 
-                  to="/" 
+                <Link
+                  to="/"
                   className="inline-flex items-center text-neon-blue hover:text-neon-cyan transition-colors text-sm font-medium"
                 >
                   <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -116,11 +116,11 @@ export default function CommercialLights() {
                   Back to Home
                 </Link>
               </div>
-              
+
               <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
                 <span className="bg-clip-text bg-gradient-to-r from-neon-blue to-neon-cyan animate-glow">Commercial</span> LED Systems
               </h1>
-              
+
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Professional-grade LED solutions designed for scalability, durability, and high-traffic commercial environments
               </p>
@@ -162,9 +162,10 @@ export default function CommercialLights() {
                   <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                     <div className={`aspect-video bg-gradient-to-br ${product.color} p-0.5 rounded-xl`}>
                       <div className="w-full h-full bg-dark-700 rounded-xl overflow-hidden flex items-center justify-center p-4">
-                        <img 
-                          src={product.image} 
+                        <img
+                          src={product.image}
                           alt={product.name}
+                          loading="lazy"
                           className="max-w-full max-h-full object-contain rounded-lg"
                         />
                       </div>
@@ -291,12 +292,11 @@ export default function CommercialLights() {
                       {product.specifications.voltage}
                     </div>
                     <div className="text-center">
-                      <span className={`inline-block px-2 py-1 rounded-full text-xs font-medium ${
-                        product.specifications.ipRating === 'IP68' ? 'text-neon-green' :
+                      <span className={`inline-block px-2 py-1 rounded-full text-xs font-medium ${product.specifications.ipRating === 'IP68' ? 'text-neon-green' :
                         product.specifications.ipRating === 'IP67' ? 'text-neon-blue' :
-                        product.specifications.ipRating === 'IP65' ? 'text-neon-cyan' :
-                        'text-neon-purple'
-                      }`}>
+                          product.specifications.ipRating === 'IP65' ? 'text-neon-cyan' :
+                            'text-neon-purple'
+                        }`}>
                         {product.specifications.ipRating}
                       </span>
                     </div>
@@ -350,14 +350,14 @@ export default function CommercialLights() {
                   Get professional consultation and custom solutions tailored to your commercial lighting needs.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <Link 
-                    to="/#contact" 
+                  <Link
+                    to="/#contact"
                     className="btn-primary text-lg px-8 py-4"
                   >
                     Get Quote
                   </Link>
-                  <Link 
-                    to="/#products" 
+                  <Link
+                    to="/#products"
                     className="btn-secondary text-lg px-8 py-4"
                   >
                     View All Products
